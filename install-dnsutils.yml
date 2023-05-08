@@ -2,8 +2,8 @@
   hosts: all
   become: true
   tasks:
-    - name: Ansible apt install dnsutils
-    apt:
-    name: dnsutils
-    state: present
+   - name: Ansible apt install dnsutils
+     apt:
+       name: dnsutils
+       state: present
     
