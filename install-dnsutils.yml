@@ -1,7 +1,10 @@
 - hosts: all
-
-tasks:
-- apt:
-  name: dnsutils 
+  tasks:
+  - name: install dnsutils 
   become: true
-  when: ansible_os_family == “Debian”
+  become_user: root
+  apt:
+    state: present
+    name:
+      - dnsutils
+  
