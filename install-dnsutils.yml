@@ -1,17 +1,7 @@
 - hosts: all
 
-become: true
-
 tasks:
-
-- yum:
-
-name: bind-utils
-
-when: ansible_os_family == “RedHat”
-
 - apt:
-
-name: dnsutils
-
-when: ansible_os_family == “Debian”
+  name: dnsutils 
+  become: true
+  when: ansible_os_family == “Debian”
