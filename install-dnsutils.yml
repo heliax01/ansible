@@ -1,6 +1,7 @@
 - name: playbook to install dnsutils
   hosts: all
   become: true
+  become_root: true
   tasks:
    - name: Ansible apt install dnsutils
      apt:
